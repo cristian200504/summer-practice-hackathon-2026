@@ -29,7 +29,11 @@ export default function DashboardPage() {
 
   return (
     <main className="dashboard-page">
-      <h1 className="dashboard-page__title">{t('dashboard.title')}</h1>
+      <div className="page-hero">
+        <span className="page-hero__icon" aria-hidden="true">🏃</span>
+        <h1 className="page-hero__title">{t('dashboard.title')}</h1>
+        <p className="page-hero__subtitle">Your sports hub — availability, teammates, and messages in one place.</p>
+      </div>
 
       {/* Availability prompt — always first (Req 4.2) */}
       <section className="dashboard-page__availability" aria-label={t('availability.prompt')}>

@@ -1,6 +1,6 @@
-.events-page { padding: var(--space-6) var(--space-4); max-width: 800px; margin: 0 auto; }
+.events-page { padding: 0 var(--space-4) var(--space-6); max-width: 800px; margin: 0 auto; }
 .events-page__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-5); flex-wrap: wrap; gap: var(--space-3); }
-.events-page__title { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin: 0; }
+.events-page__title { display: none; }
 .events-page__filters { margin-bottom: var(--space-4); }
 .events-page__filter-select { padding: var(--space-2) var(--space-3); font-family: var(--font-family-base); font-size: var(--font-size-sm); border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); min-height: 44px; color: var(--color-text-primary); background-color: var(--color-bg-primary); }
 .events-page__empty { text-align: center; color: var(--color-text-muted); padding: var(--space-8); }

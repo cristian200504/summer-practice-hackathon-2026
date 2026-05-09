@@ -142,6 +142,7 @@ export default function AvailabilityPrompt() {
 
       {step === 'prompt' && (
         <div className="availability-prompt__prompt">
+          <span style={{ fontSize: '2.5rem', lineHeight: 1, marginBottom: 'var(--space-3)' }} aria-hidden="true">🏃</span>
           <p className="availability-prompt__question">{t('availability.prompt')}</p>
           <div className="availability-prompt__actions">
             <Button

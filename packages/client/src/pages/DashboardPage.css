@@ -1,5 +1,5 @@
 .dashboard-page {
-  padding: var(--space-6) var(--space-4);
+  padding: 0 var(--space-4) var(--space-6);
   max-width: 600px;
   margin: 0 auto;
   display: flex;
@@ -8,10 +8,7 @@
 }
 
 .dashboard-page__title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  margin: 0;
+  display: none; /* replaced by .page-hero */
 }
 
 .dashboard-page__availability {

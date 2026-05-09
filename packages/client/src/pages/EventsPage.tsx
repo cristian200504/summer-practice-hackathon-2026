@@ -33,7 +33,11 @@ export default function EventsPage() {
   return (
     <main className="events-page">
       <div className="events-page__header">
-        <h1 className="events-page__title">{t('events.title')}</h1>
+        <div className="page-hero" style={{ flex: 1 }}>
+          <span className="page-hero__icon" aria-hidden="true">📅</span>
+          <h1 className="page-hero__title">{t('events.title')}</h1>
+          <p className="page-hero__subtitle">Browse and join sports events near you, or create your own.</p>
+        </div>
         <Button variant="primary" size="md" onClick={() => setShowCreate(true)}>
           + {t('events.create')}
         </Button>

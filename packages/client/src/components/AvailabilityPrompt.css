@@ -1,5 +1,6 @@
 /* AvailabilityPrompt — "ShowUpToday?" card
  *
+ * Centred, gradient-accented card matching the app's design language.
  * Touch targets ≥ 44×44 px (Req 19.3).
  * Keyboard-navigable with visible focus indicators (Req 19.2).
  */
@@ -8,27 +9,29 @@
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
+  text-align: center;
 }
 
 /* ── Error banner ─────────────────────────────────────────────────────────── */
 
 .availability-prompt__error {
-  color: var(--color-danger, #c0392b);
-  font-size: 0.875rem;
-  margin: 0 0 0.75rem;
-  padding: 0.5rem 0.75rem;
-  background: var(--color-danger-bg, #fdecea);
-  border-radius: 6px;
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-4);
+  padding: var(--space-2) var(--space-3);
+  background: #fef2f2;
+  border-radius: var(--radius-md);
+  text-align: left;
 }
 
 /* ── Shared question text ─────────────────────────────────────────────────── */
 
 .availability-prompt__question {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0 0 1.25rem;
-  line-height: 1.4;
-  color: var(--color-text-primary, #111827);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--space-5);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
 }
 
 /* ── Yes / No prompt ──────────────────────────────────────────────────────── */
@@ -36,28 +39,54 @@
 .availability-prompt__prompt {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .availability-prompt__actions {
   display: flex;
-  gap: 0.75rem;
+  gap: var(--space-3);
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
-/* Ensure touch targets are ≥ 44×44 px */
 .availability-prompt__btn {
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px;
+  min-width: 120px;
   flex: 1 1 auto;
+  max-width: 200px;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
+.availability-prompt__btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+/* Yes — gradient pill */
 .availability-prompt__btn--yes {
-  /* Slightly more prominent */
-  font-size: 1rem;
+  background: linear-gradient(135deg, var(--color-secondary), #059669) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
 }
 
+.availability-prompt__btn--yes:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+}
+
+/* No — outlined pill */
 .availability-prompt__btn--no {
-  font-size: 1rem;
+  background: transparent !important;
+  color: var(--color-text-secondary) !important;
+  border: 1.5px solid var(--color-gray-300) !important;
+}
+
+.availability-prompt__btn--no:hover:not(:disabled) {
+  border-color: var(--color-gray-500) !important;
+  color: var(--color-text-primary) !important;
 }
 
 /* ── Sport selection ──────────────────────────────────────────────────────── */
@@ -65,12 +94,14 @@
 .availability-prompt__sport-select {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .availability-prompt__sports-fieldset {
   border: none;
   padding: 0;
-  margin: 0 0 1.25rem;
+  margin: 0 0 var(--space-5);
+  width: 100%;
 }
 
 .availability-prompt__sports-list {
@@ -78,8 +109,8 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-2);
 }
 
 .availability-prompt__sport-item {
@@ -89,44 +120,42 @@
 .availability-prompt__sport-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-  border: 1.5px solid var(--color-border, #d1d5db);
-  background: var(--color-surface, #fff);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-gray-200);
+  background: var(--color-bg-secondary);
   width: 100%;
   min-height: 44px;
-  transition: border-color 0.15s, background 0.15s;
-  font-size: 0.9375rem;
-  color: var(--color-text-primary, #111827);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
 }
 
 .availability-prompt__sport-label:hover {
-  border-color: var(--color-primary, #2563eb);
-  background: var(--color-primary-bg, #eff6ff);
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
 }
 
-/* Visible focus indicator on the hidden checkbox propagated to the label */
 .availability-prompt__sport-checkbox:focus-visible + .availability-prompt__sport-name {
-  outline: 2px solid var(--color-primary, #2563eb);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 2px;
 }
 
 .availability-prompt__sport-checkbox {
-  /* Keep in DOM for accessibility but style via label */
   width: 18px;
   height: 18px;
-  accent-color: var(--color-primary, #2563eb);
+  accent-color: var(--color-primary);
   cursor: pointer;
   flex-shrink: 0;
 }
 
-/* Checked state: highlight the whole label */
 .availability-prompt__sport-label:has(.availability-prompt__sport-checkbox:checked) {
-  border-color: var(--color-primary, #2563eb);
-  background: var(--color-primary-bg, #eff6ff);
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
 }
 
 .availability-prompt__sport-name {
@@ -138,32 +167,59 @@
 .availability-prompt__status {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
+  gap: var(--space-4);
 }
 
+/* Big status pill */
 .availability-prompt__status-badge {
-  font-size: 1rem;
-  padding: 0.4rem 0.9rem;
-  align-self: flex-start;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.01em;
 }
 
+/* Sport chips row */
 .availability-prompt__selected-sports {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: var(--space-2);
+  justify-content: center;
 }
 
 .availability-prompt__sport-badge {
-  font-size: 0.8125rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
 }
 
+/* "Change response" — subtle ghost pill */
 .availability-prompt__change-btn {
-  align-self: flex-start;
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-5) !important;
+  border-radius: var(--radius-full) !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--color-text-secondary) !important;
+  border: 1px solid var(--color-gray-300) !important;
+  background: transparent !important;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast) !important;
+}
+
+.availability-prompt__change-btn:hover:not(:disabled) {
+  border-color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  background: var(--color-primary-light) !important;
+}
+
+.availability-prompt__change-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
@@ -171,6 +227,11 @@
 @media (max-width: 400px) {
   .availability-prompt__actions {
     flex-direction: column;
+    align-items: stretch;
+  }
+
+  .availability-prompt__btn {
+    max-width: none;
   }
 
   .availability-prompt__sports-list {

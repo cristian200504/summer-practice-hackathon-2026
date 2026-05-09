@@ -120,8 +120,9 @@ export default function MessagesPage() {
 
   return (
     <main className="messages-page" aria-label="Direct messages">
-      <header className="messages-page__header">
-        <h1 className="messages-page__title">
+      <div className="page-hero">
+        <span className="page-hero__icon" aria-hidden="true">💬</span>
+        <h1 className="page-hero__title">
           Messages
           {totalUnread > 0 && (
             <Badge variant="danger" className="messages-page__unread-badge">
@@ -129,7 +130,8 @@ export default function MessagesPage() {
             </Badge>
           )}
         </h1>
-      </header>
+        <p className="page-hero__subtitle">Chat directly with other players.</p>
+      </div>
 
       {/* ── Search bar ─────────────────────────────────────────────────────── */}
       <section className="messages-page__search-section" aria-label="Start new conversation">

@@ -65,10 +65,11 @@ export default function DiscoverPage() {
   return (
     <main className="discover-page" aria-label={t('discover.title')}>
       <div className="discover-page__header">
-        <h1 className="discover-page__title">{t('discover.title')}</h1>
-        <p className="discover-page__subtitle">
-          Explore sports events across the world on the map below. Click a pin to see details!
-        </p>
+        <div className="page-hero">
+          <span className="page-hero__icon" aria-hidden="true">🗺️</span>
+          <h1 className="page-hero__title">{t('discover.title')}</h1>
+          <p className="page-hero__subtitle">Explore sports events across the world. Click a pin to see details.</p>
+        </div>
       </div>
 
       {loading ? (

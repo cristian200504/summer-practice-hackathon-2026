@@ -283,7 +283,11 @@ export default function ProfilePage() {
       <ToastContainer toasts={toasts} onDismiss={dismissToast} />
 
       <div className="profile-page__container">
-        <h1 className="profile-page__title">{t('profile.title')}</h1>
+        <div className="page-hero">
+          <span className="page-hero__icon" aria-hidden="true">👤</span>
+          <h1 className="page-hero__title">{t('profile.title')}</h1>
+          <p className="page-hero__subtitle">Set up your sports profile and let the right teammates find you.</p>
+        </div>
 
         <form onSubmit={handleSubmit} noValidate aria-label={t('profile.title')}>
           {/* ── Photo upload ─────────────────────────────────────────────── */}
