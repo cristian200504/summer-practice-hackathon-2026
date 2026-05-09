@@ -1,0 +1,228 @@
+{
+  "app": {
+    "name": "ShowUp2Move",
+    "tagline": "Montre-toi. Bouge. Connecte-toi."
+  },
+  "nav": {
+    "main": "Navigation principale",
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "events": "Événements",
+    "discover": "Découvrir",
+    "profile": "Profil",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Connectez-vous à votre compte",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "noAccount": "Pas encore de compte ?",
+      "signUp": "S'inscrire",
+      "continueWithGoogle": "Continuer avec Google",
+      "errors": {
+        "invalidCredentials": "E-mail ou mot de passe invalide.",
+        "generic": "Une erreur s'est produite. Veuillez réessayer."
+      }
+    },
+    "register": {
+      "title": "Créer votre compte",
+      "subtitle": "Rejoignez ShowUp2Move et commencez à jouer",
+      "displayName": "Nom d'affichage",
+      "email": "Adresse e-mail",
+      "password": "Mot de passe",
+      "passwordHint": "Au moins 8 caractères",
+      "submit": "Créer un compte",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "logIn": "Se connecter",
+      "continueWithGoogle": "Continuer avec Google",
+      "errors": {
+        "emailInUse": "Cet e-mail est déjà enregistré.",
+        "weakPassword": "Le mot de passe doit comporter au moins 8 caractères.",
+        "generic": "Une erreur s'est produite. Veuillez réessayer."
+      }
+    },
+    "passwordReset": {
+      "requestTitle": "Réinitialiser votre mot de passe",
+      "requestSubtitle": "Entrez votre e-mail et nous vous enverrons un lien de réinitialisation.",
+      "email": "Adresse e-mail",
+      "submit": "Envoyer le lien",
+      "confirmTitle": "Définir un nouveau mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmSubmit": "Mettre à jour le mot de passe",
+      "success": "Mot de passe mis à jour avec succès.",
+      "errors": {
+        "tokenExpired": "Ce lien de réinitialisation a expiré. Veuillez en demander un nouveau.",
+        "generic": "Une erreur s'est produite. Veuillez réessayer."
+      }
+    }
+  },
+  "profile": {
+    "title": "Votre profil",
+    "displayName": "Nom d'affichage",
+    "bio": "Biographie",
+    "bioPlaceholder": "Parlez de vous et de vos sports préférés…",
+    "bioCounter": "{{count}}/300 caractères",
+    "sports": "Sports",
+    "skillLevel": "Niveau",
+    "skillLevels": {
+      "Beginner": "Débutant",
+      "Intermediate": "Intermédiaire",
+      "Advanced": "Avancé"
+    },
+    "photo": {
+      "upload": "Télécharger une photo",
+      "change": "Changer la photo",
+      "dragDrop": "Glissez-déposez ou cliquez pour télécharger",
+      "formats": "JPEG, PNG ou WebP — max 5 Mo",
+      "errors": {
+        "invalidFormat": "Seuls les fichiers JPEG, PNG et WebP sont acceptés.",
+        "tooLarge": "Le fichier doit être inférieur à 5 Mo.",
+        "generic": "Échec du téléchargement. Veuillez réessayer."
+      }
+    },
+    "save": "Enregistrer le profil",
+    "saved": "Profil enregistré",
+    "errors": {
+      "bioTooLong": "La biographie doit comporter 300 caractères ou moins.",
+      "displayNameRequired": "Le nom d'affichage est requis.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "aiSuggestions": {
+      "title": "Sports suggérés",
+      "subtitle": "Basé sur votre biographie et votre photo",
+      "accept": "Ajouter",
+      "dismiss": "Ignorer",
+      "noSuggestions": "Aucune suggestion trouvée. Sélectionnez vos sports manuellement ci-dessous."
+    }
+  },
+  "availability": {
+    "prompt": "Êtes-vous disponible pour jouer aujourd'hui ?",
+    "yes": "Oui, je suis partant !",
+    "no": "Pas aujourd'hui",
+    "selectSports": "Pour quels sports êtes-vous disponible ?",
+    "status": {
+      "available": "Vous êtes disponible aujourd'hui",
+      "unavailable": "Vous n'êtes pas disponible aujourd'hui",
+      "notResponded": "Avez-vous répondu aujourd'hui ?"
+    },
+    "change": "Changer la réponse"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bon retour, {{name}} !",
+    "noMatch": "Pas encore de correspondance aujourd'hui. Revenez bientôt !",
+    "recommendations": "Personnes avec qui vous pourriez jouer"
+  },
+  "events": {
+    "title": "Événements",
+    "create": "Créer un événement",
+    "noEvents": "Aucun événement trouvé.",
+    "filters": {
+      "sport": "Sport",
+      "date": "Date",
+      "proximity": "Près de moi"
+    },
+    "detail": {
+      "participants": "Participants",
+      "captain": "Capitaine",
+      "venue": "Lieu",
+      "time": "Heure",
+      "addToCalendar": "Ajouter au calendrier",
+      "share": "Partager l'événement",
+      "getDirections": "Obtenir l'itinéraire",
+      "confirm": "Confirmer",
+      "decline": "Décliner"
+    }
+  },
+  "match": {
+    "found": "Correspondance trouvée !",
+    "members": "{{count}} joueurs",
+    "confirmed": "{{count}} confirmé(s)",
+    "timeLeft": "Temps restant : {{time}}",
+    "active": "Groupe actif !",
+    "dissolved": "Groupe dissous"
+  },
+  "captain": {
+    "role": "Capitaine",
+    "dashboard": "Tableau de bord capitaine",
+    "subtitle": "Vous êtes le capitaine — coordonnez l'événement ci-dessous.",
+    "initiatePoll": "Lancer un sondage",
+    "suggestVenue": "Suggérer un lieu",
+    "setTime": "Définir l'heure",
+    "announce": "Envoyer une annonce",
+    "announcementLabel": "Message d'annonce",
+    "announcementPlaceholder": "Tapez votre annonce…"
+  },
+  "chat": {
+    "placeholder": "Tapez un message…",
+    "send": "Envoyer",
+    "systemMessage": "Système",
+    "poll": {
+      "vote": "Voter",
+      "votes": "{{count}} votes",
+      "closed": "Sondage fermé",
+      "winner": "Gagnant : {{option}}"
+    }
+  },
+  "discover": {
+    "title": "Découvrir",
+    "nearbyEvents": "Événements près de vous",
+    "noEvents": "Aucun événement à proximité. Créez-en un !"
+  },
+  "notifications": {
+    "preferences": "Préférences de notification",
+    "types": {
+      "availability_prompt": "Rappel de disponibilité quotidien",
+      "match_found": "Correspondance trouvée",
+      "match_confirmation": "Demande de confirmation",
+      "captain_assigned": "Attribution du capitaine",
+      "new_message": "Nouveau message",
+      "poll_result": "Résultat du sondage",
+      "event_reminder": "Rappel d'événement",
+      "achievement_unlocked": "Succès débloqué",
+      "weather_alert": "Alerte météo"
+    }
+  },
+  "achievements": {
+    "title": "Succès",
+    "unlocked": "Succès débloqué : {{title}}"
+  },
+  "leaderboard": {
+    "title": "Classement",
+    "rank": "Rang",
+    "player": "Joueur",
+    "achievements": "Succès",
+    "filterBySport": "Filtrer par sport"
+  },
+  "errors": {
+    "notFound": "Page introuvable.",
+    "generic": "Une erreur s'est produite. Veuillez réessayer.",
+    "offline": "Vous semblez être hors ligne.",
+    "reconnecting": "Reconnexion en cours…"
+  },
+  "settings": {
+    "language": "Langue"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Soumettre",
+    "confirm": "Confirmer",
+    "decline": "Décliner",
+    "yes": "Oui",
+    "no": "Non",
+    "or": "ou"
+  }
+}

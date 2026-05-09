@@ -1,0 +1,98 @@
+.captain-dashboard {
+  border-left: 4px solid var(--color-warning);
+}
+
+.captain-dashboard__banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.captain-dashboard__crown {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.captain-dashboard__badge {
+  margin-bottom: var(--space-1);
+}
+
+/* #374151 on white → contrast 10.7:1 ✓ AA */
+.captain-dashboard__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ── Action buttons ──────────────────────────────────────────────────────── */
+
+.captain-dashboard__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+/* Ensure touch targets ≥ 44×44px (Req 19.3) */
+.captain-dashboard__actions .btn {
+  min-height: 44px;
+  justify-content: flex-start;
+}
+
+/* ── Announcement form ───────────────────────────────────────────────────── */
+
+.captain-dashboard__announcement {
+  border-top: 1px solid var(--color-gray-200);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* #374151 on white → contrast 10.7:1 ✓ AA */
+.captain-dashboard__announcement-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.captain-dashboard__announcement-textarea {
+  width: 100%;
+  padding: var(--space-3);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.captain-dashboard__announcement-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* #6b7280 on white → contrast 4.61:1 ✓ AA */
+.captain-dashboard__announcement-counter {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.captain-dashboard__announcement-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .captain-dashboard__actions {
+    grid-template-columns: 1fr;
+  }
+}

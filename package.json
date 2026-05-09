@@ -1,0 +1,22 @@
+{
+  "name": "show-up-2-move",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart social sports-matching platform",
+  "workspaces": [
+    "packages/client",
+    "packages/server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=packages/server\" \"npm run dev --workspace=packages/client\"",
+    "build": "npm run build --workspace=packages/server && npm run build --workspace=packages/client",
+    "lint": "npm run lint --workspace=packages/server && npm run lint --workspace=packages/client",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"packages/**/*.{ts,tsx,json,css,md}\"",
+    "test": "npm run test --workspace=packages/server && npm run test --workspace=packages/client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5"
+  }
+}

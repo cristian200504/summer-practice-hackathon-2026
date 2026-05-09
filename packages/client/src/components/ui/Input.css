@@ -1,0 +1,63 @@
+/* ── Input field component ───────────────────────────────────────────────── */
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* Label — #374151 on white → contrast 10.7:1 ✓ AA */
+.input-field__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.input-field__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  /* #111827 on white → contrast 19.6:1 ✓ AA */
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  min-height: 44px;
+}
+
+.input-field__input::placeholder {
+  /* #9ca3af on white → contrast 2.85:1 — placeholder text is decorative, not required to meet AA */
+  color: var(--color-gray-400);
+}
+
+.input-field__input:hover {
+  border-color: var(--color-gray-400);
+}
+
+.input-field__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.input-field__input--error {
+  border-color: var(--color-danger);
+}
+
+.input-field__input--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Hint — #6b7280 on white → contrast 4.61:1 ✓ AA */
+.input-field__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+
+/* Error — #dc2626 on white → contrast 5.74:1 ✓ AA */
+.input-field__error {
+  font-size: var(--font-size-sm);
+  color: #dc2626;
+}

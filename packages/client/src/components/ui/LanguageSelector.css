@@ -1,0 +1,35 @@
+.lang-selector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* #374151 on white → contrast 10.7:1 ✓ AA */
+.lang-selector__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.lang-selector__select {
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  min-height: 44px;
+  transition: border-color var(--transition-fast);
+}
+
+.lang-selector__select:hover {
+  border-color: var(--color-gray-400);
+}
+
+.lang-selector__select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}

@@ -1,0 +1,106 @@
+.venue-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Weather widget ──────────────────────────────────────────────────────── */
+
+.venue-suggestions__weather-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.venue-suggestions__weather-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* #111827 on white → contrast 19.6:1 ✓ AA */
+.venue-suggestions__weather-desc {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* #6b7280 on white → contrast 4.61:1 ✓ AA */
+.venue-suggestions__weather-meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: var(--space-1) 0 0;
+}
+
+.venue-suggestions__advisory {
+  margin-top: var(--space-3);
+}
+
+/* ── Notices ─────────────────────────────────────────────────────────────── */
+
+/* #6b7280 on white → contrast 4.61:1 ✓ AA */
+.venue-suggestions__radius-notice,
+.venue-suggestions__empty {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: var(--space-4);
+}
+
+/* #dc2626 on white → contrast 5.74:1 ✓ AA */
+.venue-suggestions__error {
+  font-size: var(--font-size-sm);
+  color: #dc2626;
+  padding: var(--space-3);
+  background-color: #fef2f2;
+  border-radius: var(--radius-md);
+}
+
+/* ── Venue cards ─────────────────────────────────────────────────────────── */
+
+.venue-suggestions__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.venue-suggestions__card-header {
+  margin-bottom: var(--space-3);
+}
+
+/* #111827 on white → contrast 19.6:1 ✓ AA */
+.venue-suggestions__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+}
+
+/* #6b7280 on white → contrast 4.61:1 ✓ AA */
+.venue-suggestions__address {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-2);
+}
+
+.venue-suggestions__meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.venue-suggestions__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Touch targets ≥ 44×44px (Req 19.3) */
+.venue-suggestions__actions .btn {
+  min-height: 44px;
+}

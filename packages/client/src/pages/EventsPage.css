@@ -1,0 +1,17 @@
+.events-page { padding: var(--space-6) var(--space-4); max-width: 800px; margin: 0 auto; }
+.events-page__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-5); flex-wrap: wrap; gap: var(--space-3); }
+.events-page__title { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin: 0; }
+.events-page__filters { margin-bottom: var(--space-4); }
+.events-page__filter-select { padding: var(--space-2) var(--space-3); font-family: var(--font-family-base); font-size: var(--font-size-sm); border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); min-height: 44px; color: var(--color-text-primary); background-color: var(--color-bg-primary); }
+.events-page__empty { text-align: center; color: var(--color-text-muted); padding: var(--space-8); }
+.events-page__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-3); }
+.events-page__event-link { text-decoration: none; display: block; }
+.events-page__event-card:hover { box-shadow: var(--shadow-md); }
+.events-page__event-header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-2); }
+.events-page__event-title { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); color: var(--color-text-primary); margin: 0; }
+.events-page__event-meta, .events-page__event-venue, .events-page__event-participants { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin: var(--space-1) 0 0; }
+.create-event-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.create-event-form__label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-gray-700); display: block; margin-bottom: var(--space-1); }
+.create-event-form__select { width: 100%; padding: var(--space-3); font-family: var(--font-family-base); font-size: var(--font-size-base); border: 1px solid var(--color-gray-300); border-radius: var(--radius-md); min-height: 44px; color: var(--color-text-primary); }
+.create-event-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.create-event-form__error { font-size: var(--font-size-sm); color: #dc2626; padding: var(--space-2) var(--space-3); background-color: #fef2f2; border-radius: var(--radius-md); }

@@ -1,0 +1,65 @@
+.dashboard-page {
+  padding: var(--space-6) var(--space-4);
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.dashboard-page__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.dashboard-page__availability {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-page__section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.dashboard-page__rec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dashboard-page__rec-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.dashboard-page__rec-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+/* #111827 on white → contrast 19.6:1 ✓ AA */
+.dashboard-page__rec-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.dashboard-page__rec-score {
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+}
+
+.dashboard-page__messages {
+  /* DM widget takes full width within the dashboard column */
+}

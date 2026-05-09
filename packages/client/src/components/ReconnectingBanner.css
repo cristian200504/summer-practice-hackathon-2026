@@ -1,0 +1,42 @@
+.reconnecting-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-toast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  /* #78350f on #fffbeb → contrast 9.1:1 ✓ AA */
+  background-color: #fffbeb;
+  color: #78350f;
+  border-bottom: 2px solid var(--color-warning);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  animation: slideDown var(--transition-base);
+}
+
+/* #7f1d1d on #fef2f2 → contrast 9.4:1 ✓ AA */
+.reconnecting-banner--error {
+  background-color: #fef2f2;
+  color: #7f1d1d;
+  border-bottom-color: var(--color-danger);
+}
+
+.reconnecting-banner__spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}

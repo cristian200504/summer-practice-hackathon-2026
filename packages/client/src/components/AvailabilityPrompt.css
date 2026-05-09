@@ -1,0 +1,179 @@
+/* AvailabilityPrompt — "ShowUpToday?" card
+ *
+ * Touch targets ≥ 44×44 px (Req 19.3).
+ * Keyboard-navigable with visible focus indicators (Req 19.2).
+ */
+
+.availability-prompt {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Error banner ─────────────────────────────────────────────────────────── */
+
+.availability-prompt__error {
+  color: var(--color-danger, #c0392b);
+  font-size: 0.875rem;
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-danger-bg, #fdecea);
+  border-radius: 6px;
+}
+
+/* ── Shared question text ─────────────────────────────────────────────────── */
+
+.availability-prompt__question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+  line-height: 1.4;
+  color: var(--color-text-primary, #111827);
+}
+
+/* ── Yes / No prompt ──────────────────────────────────────────────────────── */
+
+.availability-prompt__prompt {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-prompt__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Ensure touch targets are ≥ 44×44 px */
+.availability-prompt__btn {
+  min-height: 44px;
+  min-width: 44px;
+  flex: 1 1 auto;
+}
+
+.availability-prompt__btn--yes {
+  /* Slightly more prominent */
+  font-size: 1rem;
+}
+
+.availability-prompt__btn--no {
+  font-size: 1rem;
+}
+
+/* ── Sport selection ──────────────────────────────────────────────────────── */
+
+.availability-prompt__sport-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-prompt__sports-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.availability-prompt__sports-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+
+.availability-prompt__sport-item {
+  display: flex;
+}
+
+.availability-prompt__sport-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--color-border, #d1d5db);
+  background: var(--color-surface, #fff);
+  width: 100%;
+  min-height: 44px;
+  transition: border-color 0.15s, background 0.15s;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary, #111827);
+}
+
+.availability-prompt__sport-label:hover {
+  border-color: var(--color-primary, #2563eb);
+  background: var(--color-primary-bg, #eff6ff);
+}
+
+/* Visible focus indicator on the hidden checkbox propagated to the label */
+.availability-prompt__sport-checkbox:focus-visible + .availability-prompt__sport-name {
+  outline: 2px solid var(--color-primary, #2563eb);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.availability-prompt__sport-checkbox {
+  /* Keep in DOM for accessibility but style via label */
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary, #2563eb);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Checked state: highlight the whole label */
+.availability-prompt__sport-label:has(.availability-prompt__sport-checkbox:checked) {
+  border-color: var(--color-primary, #2563eb);
+  background: var(--color-primary-bg, #eff6ff);
+}
+
+.availability-prompt__sport-name {
+  flex: 1;
+}
+
+/* ── Status view ──────────────────────────────────────────────────────────── */
+
+.availability-prompt__status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.availability-prompt__status-badge {
+  font-size: 1rem;
+  padding: 0.4rem 0.9rem;
+  align-self: flex-start;
+}
+
+.availability-prompt__selected-sports {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.availability-prompt__sport-badge {
+  font-size: 0.8125rem;
+}
+
+.availability-prompt__change-btn {
+  align-self: flex-start;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 400px) {
+  .availability-prompt__actions {
+    flex-direction: column;
+  }
+
+  .availability-prompt__sports-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
